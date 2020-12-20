@@ -1,0 +1,119 @@
+
+/* スタイルのリセット */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* ここからスタイルを指定 */
+header {
+    background-color: rgb(29, 5, 139);
+    color: #fff;
+    height: 60px;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-left a:visited {
+    color: #eee;
+}
+
+.header-right {
+    color: #fff;
+    float: right;
+}
+
+.header-right a:visited {
+    color: #eee;
+}
+
+
+.top-wrapper {
+    height: 500px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.top-wrapper h1 {
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+.top-wrapper a {
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    background-color: rgb(102, 173, 31);
+    padding: 8px 24px;
+    margin-top: 50px;
+}
+
+.top-wrapper a:visited {
+    color: #eee;
+}
+
+
+.login-wrapper {
+    height: 300px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+.list-wrapper {
+    height: max-content;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.list-wrapper ul {
+    border: 2px solid rgb(60, 60, 60);
+    width: max-content;
+}
+
+.list-wrapper li {
+    border: 1px solid rgb(60, 60, 60);
+}
+
+
+footer {
+    background-color: rgb(29, 5, 139);
+    color: #fff;
+    height: 60px;
+}
+
+.footer-left {
+    color: #fff;
+    float: left;
+}
+
+.footer-left a:visited {
+    color: #eee;
+}
+
+.footer-right {
+    color: #fff;
+    float: right;
+}
+
+.footer-right a:visited {
+    color: #eee;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
