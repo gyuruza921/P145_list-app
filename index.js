@@ -11,10 +11,11 @@ app.use(express.urlencoded({extended: false}));
 // データベースへ接続
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'kawabutairuka',
+  user: 'list',
+  password: 'haitsun',
   database: 'list_app'
 });
+
 
 // 接続エラー発生時の処理
 connection.connect((err) => {
