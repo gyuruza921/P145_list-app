@@ -40,20 +40,6 @@ app.get('/', (req, res) => {
 });
 
 
-// 買い物リスト画面
-app.get('/list', (req, res) => {
-
-  connection.query(
-    'SELECT * FROM items',
-    (error, results) => {
-      console.log(results);
-      console.log(results[0]);
-      res.render('list.ejs', {items: results});
-    }
-  );
-
-})
-
 // ログイン画面
 app.get('/login', (req, res) => {
 
@@ -105,6 +91,73 @@ app.post('/newuser', (req, res)=>{
       res.redirect('/signup');
     }
   );
+
+});
+
+
+// 買い物リスト画面
+app.get('/list', (req, res) => {
+
+  connection.query(
+    'SELECT * FROM items',
+    (error, results) => {
+      console.log(results);
+      // console.log(results[0]);
+      res.render('list.ejs', {items: results});
+    }
+  );
+
+});
+
+// 買い物リストの追加
+app.post('/add', (req, res) => {
+
+  console.log(req.body.item);
+
+  connection.query(
+    'INSERT INTO items (name) VALUES (?)',
+    [req.body.item],
+      res.redirect('/list')
+  );
+
+});
+
+// 買い物リストの削除
+app.get('/delete', (req, res) => {
+
+  console.log("id" + req.query.id);
+
+  // データベースから指定された行を削除
+  connection.query(
+    'DELETE FROM items WHERE id = ? ',
+    [req.query.id],
+    res.redirect('/list')
+  );
+
+});
+
+// 買い物リストの編集
+app.get('/edit', (req, res) => {
+
+  console.log("id" + req.query.id);
+
+  // データベースの指定された行を編集
+  connection.query(
+    'SELECT * FROM items',
+    (error, results) => {
+      console.log(results);
+      res.render('edit.ejs', {items: results, id: req.query.id});
+    }
+  );
+
+});
+
+// 
+app.post('/update', (req, res) => {
+
+  console.log(req.body);
+
+  res.redirect('/list');
 
 });
 

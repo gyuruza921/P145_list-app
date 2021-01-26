@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>お買い物リスト</title>
+        <title>お買い物リスト編集</title>
         <link rel="stylesheet" href="CSS/base.css">
     </head>
     <body>
@@ -30,9 +30,20 @@
                     </thead>
                     <tbody>
                     <% items.forEach( (item) => { _%>
-                    <tr>
-                        <td><%= item.id %></td> 
+                    <tr>    
+                    <% if(item.id == id){ _%>
+                        <td><%= item.id %></td>
+                        <td>
+                            <form action="/update" method="POST">
+                               <input type="text" value="<%= item.name %>" name="item">
+                               <input type="hidden" value="<%= item.id %>" name="id">
+                               <input type="submit" value="編集" >
+                            </form>
+                        </td>
+                    <% } else { _%>
+                        <td><%= item.id %></td>
                         <td><%= item.name %></td>
+                    <% } _%>
                         <td>
                             <form action="/delete" method="GET">
                                 <input type="hidden" name="id" value="<%= item.id %>">
@@ -40,8 +51,8 @@
                                 <input type="submit" value="編集" formaction="/edit">
                             </form>
                         </td>
-                    </tr>
-                    <%}); _%>                        
+                    </tr>     
+                    <%}); _%>    
                     </tbody>
                     <tfoot>
                         <tr>

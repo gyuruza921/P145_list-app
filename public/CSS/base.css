@@ -78,14 +78,26 @@ header {
     padding-top: 80px;
     padding-bottom: 100px;
 }
-
-.list-wrapper ul {
+.list-wrapper table {
+    background-color: rgb(245, 245, 245);
     border: 2px solid rgb(60, 60, 60);
     width: max-content;
 }
-
-.list-wrapper li {
+.list-wrapper th {
+    background-color: rgb(245, 245, 245);
     border: 1px solid rgb(60, 60, 60);
+}
+.list-wrapper tr {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(60, 60, 60);
+}
+.list-wrapper td {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(60, 60, 60);
+}
+.list-wrapper td form {
+    background-color: rgb(255, 245, 245);
+    display: inline;
 }
 
 
