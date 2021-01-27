@@ -21,20 +21,16 @@ header {
     color: #fff;
     height: 60px;
 }
-
 .header-left {
     float: left;
 }
-
 .header-left a:visited {
     color: #eee;
 }
-
 .header-right {
     color: #fff;
     float: right;
 }
-
 .header-right a:visited {
     color: #eee;
 }
@@ -46,12 +42,10 @@ header {
     padding-bottom: 100px;
     text-align: center;
 }
-
 .top-wrapper h1 {
     font-size: 45px;
     letter-spacing: 5px;
 }
-
 .top-wrapper a {
     color: #fff;
     font-weight: bold;
@@ -60,7 +54,6 @@ header {
     padding: 8px 24px;
     margin-top: 50px;
 }
-
 .top-wrapper a:visited {
     color: #eee;
 }
@@ -78,22 +71,10 @@ header {
     padding-top: 80px;
     padding-bottom: 100px;
 }
-.list-wrapper table {
+table ,th ,tr ,td {
     background-color: rgb(245, 245, 245);
     border: 2px solid rgb(60, 60, 60);
     width: max-content;
-}
-.list-wrapper th {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(60, 60, 60);
-}
-.list-wrapper tr {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(60, 60, 60);
-}
-.list-wrapper td {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(60, 60, 60);
 }
 .list-wrapper td form {
     background-color: rgb(255, 245, 245);

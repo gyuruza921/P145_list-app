@@ -152,12 +152,17 @@ app.get('/edit', (req, res) => {
 
 });
 
-// 
+// 買い物リストの更新
 app.post('/update', (req, res) => {
 
   console.log(req.body);
 
-  res.redirect('/list');
+  // データの更新
+  connection.query(
+    'UPDATE items SET name = ? WHERE id = ?',
+    [req.body.item, req.body.id],
+    res.redirect('/list')
+  );
 
 });
 
