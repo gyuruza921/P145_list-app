@@ -33,7 +33,6 @@ app.get('/', (req, res) => {
   connection.query(
     'SELECT * FROM users',
     (error, results) => {
-      console.log(results);
       res.render('top.ejs');
     }
   );
@@ -73,13 +72,14 @@ app.post('/signin', (req, res) => {
 });
 
 
-// ユーザーの新規登録
+// ユーザー新規登録画面へ移動
 app.get('/signup', (req, res) => {
 
   res.render('signup.ejs');
 
 });
 
+// ユーザーの新規登録
 app.post('/newuser', (req, res)=>{
 
   console.log(req.body.username);
@@ -101,8 +101,6 @@ app.get('/list', (req, res) => {
   connection.query(
     'SELECT * FROM items',
     (error, results) => {
-      console.log(results);
-      // console.log(results[0]);
       res.render('list.ejs', {items: results});
     }
   );
@@ -112,7 +110,6 @@ app.get('/list', (req, res) => {
 // 買い物リストの追加
 app.post('/add', (req, res) => {
 
-  console.log(req.body.item);
 
   connection.query(
     'INSERT INTO items (name) VALUES (?)',
@@ -124,8 +121,6 @@ app.post('/add', (req, res) => {
 
 // 買い物リストの削除
 app.get('/delete', (req, res) => {
-
-  console.log("id" + req.query.id);
 
   // データベースから指定された行を削除
   connection.query(
@@ -139,9 +134,7 @@ app.get('/delete', (req, res) => {
 // 買い物リストの編集
 app.get('/edit', (req, res) => {
 
-  console.log("id" + req.query.id);
-
-  // データベースの指定された行を編集
+  // 編集画面へ移動
   connection.query(
     'SELECT * FROM items',
     (error, results) => {

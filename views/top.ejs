@@ -6,16 +6,7 @@
         <link rel="stylesheet" href="CSS/base.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div class="header-left">
-                    <h1>List-app</h1>
-                </div>
-                <div class="header-right">
-                    <a href="/login">ログイン</a>
-                </div>
-            </div>
-        </header>
+        <%- include("header.ejs") %>
         <section class="top-wrapper">
             <div class="container">
                 <h1>ようこそ！</h1>
@@ -24,14 +15,6 @@
                 <a href="/signup">新規登録はこちら</a>
             </div>
         </section>
-        <footer>
-            <div class="container">
-                <div class="footer-left">
-                    <h1>List-app</h1>
-                </div>
-                <div class="footer-right">
-                    <a href="/login">ログイン</a>
-            </div>
-        </footer>
+        <%- include("footer.ejs") %>
     </body>
 </html>

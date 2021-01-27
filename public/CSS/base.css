@@ -17,24 +17,24 @@ li {
 
 /* ここからスタイルを指定 */
 header {
-    background-color: rgb(29, 5, 139);
+    padding: 10px 0px 30px 0px;
+    background-color: #0000cc;
     color: #fff;
-    height: 60px;
+    height: 80px;
 }
 .header-left {
     float: left;
 }
 .header-left a:visited {
-    color: #eee;
+    color: #fff;
 }
 .header-right {
     color: #fff;
     float: right;
 }
 .header-right a:visited {
-    color: #eee;
+    color: #fff;
 }
-
 
 .top-wrapper {
     height: 500px;
@@ -50,16 +50,22 @@ header {
     color: #fff;
     font-weight: bold;
     display: inline-block;
-    background-color: rgb(102, 173, 31);
+    background-color: #33cc66;
     padding: 8px 24px;
     margin-top: 50px;
+    border-radius: 5px;
+    border-style: outset;
+}
+.top-wrapper a:hover{
+    border-style: inset;
 }
 .top-wrapper a:visited {
-    color: #eee;
+    color: #fff;
 }
 
 
 .login-wrapper {
+    background-color: #f9f9f9;
     height: 300px;
     padding-top: 80px;
     padding-bottom: 100px;
@@ -67,43 +73,73 @@ header {
 
 
 .list-wrapper {
-    height: max-content;
+    min-height: max-content;
     padding-top: 80px;
     padding-bottom: 100px;
 }
-table ,th ,tr ,td {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(60, 60, 60);
+
+table{
+    font-size: 20px;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 5px;
     width: max-content;
 }
-.list-wrapper td form {
-    background-color: rgb(255, 245, 245);
+
+tr, th, td {
+    padding: 5px;
+}
+
+thead {
+    color: #f9f9f9;
+    background-color: #339966;
+}
+
+tbody {
+    text-align: center;
+}
+tbody tr{
+    background-color: #fcc;
+    border-bottom: 1px;
+    width: max-content;
+}
+tbody td:first-child {
+    color: #f9f9f9;
+    background-color: #e55;
+    border-bottom: 1px;
+    width: max-content;
+}
+tbody tr:nth-child(odd) {
+    background-color: #fbb;
+    border-bottom: 1px;
+    width: max-content;
+}
+
+tfoot td form {
+    background-color: #eef;
     display: inline;
 }
 
 
 footer {
-    background-color: rgb(29, 5, 139);
+    padding: 20px 0px 40px 0px;
+    background-color: #0000cc;
     color: #fff;
-    height: 60px;
+    height: 80px;
 }
-
 .footer-left {
     color: #fff;
     float: left;
 }
-
 .footer-left a:visited {
-    color: #eee;
+    color: #fff;
 }
-
 .footer-right {
     color: #fff;
     float: right;
 }
-
 .footer-right a:visited {
-    color: #eee;
+    color: #fff;
 }
 
 .container {
